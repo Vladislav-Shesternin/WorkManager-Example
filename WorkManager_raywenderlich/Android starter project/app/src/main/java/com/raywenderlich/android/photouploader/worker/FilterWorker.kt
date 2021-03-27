@@ -8,12 +8,12 @@ import androidx.work.Worker
 import com.raywenderlich.android.photouploader.ImageUtils
 
 private const val IMAGE_PATH_PREFIX = "IMAGE_PATH_"
+private const val TAG = "FilterWorker"
 
 const val KEY_IMAGE_URI = "IMAGE_URI"
 const val KEY_IMAGE_INDEX = "IMAGE_INDEX"
 
 class FilterWorker : Worker() {
-    private val TAG = this::class.simpleName
 
     override fun doWork(): WorkerResult {
         return try {
